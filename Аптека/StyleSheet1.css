@@ -1,0 +1,46 @@
+﻿
+dt
+{
+    font-size:20px;
+    color:darkblue;
+}
+a {
+    background-color: azure;
+    border: solid;
+    border-width: 5px;
+    color: black;
+    padding: 15px 20px;
+    text-decoration: none;
+    display: inline-block;
+    /**margin-left: 25em;*/
+    margin-right: 25em;
+}
+ a:hover, a:active {
+        background-color:burlywood;
+ }
+ a:visited{
+    color:purple;
+ }
+img {
+    width: 100%;
+    opacity:60%;
+    /*height:50%;*/
+}
+hr{
+    height:10px;
+    width:100%;
+}
+.container {
+    position:relative;
+    text-align: justify;
+    color: black;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -40%);
+    background-color: antiquewhite;
+    border-color: aqua;
+    border:none;
+}
