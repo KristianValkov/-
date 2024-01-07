@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <title>Сървър</title>
+</head>
+<body bgcolor="#d7dddc">
+    <textarea id="taResult" style="font-size:30px" rows="4" cols="50"></textarea>
+    <script>
+        var taResult = document.getElementById("taResult");
+        var formData = localStorage.getItem("formData");
+        if (formData) {
+            formData = JSON.parse(formData);
+            taResult.value = "Име:" + formData.fname
+                + "\nФамилия:" + formData.lname
+                + "\nИмейл:" + formData.email
+                + "\nВреме на плащане:" + formData.time;
+        }
+        else {
+            taResult.value = "Няма получени данни";
+        }
+        function clearData() {
+            localStorage.removeItem("formData");
+            taResult.value = "Данните бяха изтрити";
+        }
+    </script>
+    <button onclick="clearData()">Изчисти данните</button>
+</body>
+</html>
